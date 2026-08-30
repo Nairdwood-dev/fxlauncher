@@ -1,5 +1,7 @@
 # Nairdwood Launcher
 
+![Screenshot of Nairdwood Launcher.](https://www.imghost.onl/uploads/nairdwood/files/6a9461974074b2.06412081.png)
+
 Nairdwood Launcher is a standalone Windows desktop launcher and live console for FXServer. It is a
 general-purpose companion application, not a FiveM resource, and keeps team-specific developer
 onboarding and private repository setup out of the public build.
