@@ -1,0 +1,38 @@
+name: Build Nairdwood Launcher
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 7.0.x
+
+      - name: Publish Windows executable
+        shell: pwsh
+        run: ./build.ps1
+
+      - name: Upload Windows executable
+        uses: actions/upload-artifact@v7
+        with:
+          name: Nairdwood-Launcher-win-x64
+          path: publish/win-x64/Nairdwood Launcher.exe
+          if-no-files-found: error
+          retention-days: 14

@@ -1,0 +1,9 @@
+bin/
+obj/
+publish/
+.dotnet-cli/
+.txadmin-reference/
+.vs/
+*.user
+*.suo
+*.log
