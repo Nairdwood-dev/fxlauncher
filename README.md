@@ -79,9 +79,3 @@ name, display name, or executable path contains `MariaDB`.
 Starting or stopping a Windows service requires administrator rights. Nairdwood Launcher requests
 UAC elevation only for that action; running and viewing FXServer does not require the launcher to
 remain elevated.
-
-## Live validation still required
-
-Before replacing an existing server shortcut, test the selected FXServer or batch target locally.
-Verify txAdmin child-process output, interactive commands, graceful `quit`, crash restart, and the
-locally configured MariaDB service name.
